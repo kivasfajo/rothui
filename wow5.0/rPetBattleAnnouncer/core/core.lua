@@ -83,7 +83,6 @@ ag1 = canvas:CreateAnimationGroup()
 a1 = ag1:CreateAnimation("Alpha")
 a1:SetDuration(0.8)
 a1:SetSmoothing("IN")
-a1:SetChange(1)
 canvas.ag1 = ag1
 canvas.ag1.a1 = a1
 
@@ -92,7 +91,6 @@ ag2 = canvas:CreateAnimationGroup()
 a2 = ag2:CreateAnimation("Alpha")
 a2:SetDuration(0.8)
 a2:SetSmoothing("OUT")
-a2:SetChange(-1)
 canvas.ag2 = ag2
 canvas.ag2.a2 = a2
 
@@ -198,7 +196,6 @@ local function loadModel(model,displayId)
   model:ClearModel()
   model:SetModel("interface\\buttons\\talktomequestionmark.m2") --in case setdisplayinfo fails
   model:SetDisplayInfo(displayId)
-  local test = model:GetModel()
   model.id = displayId
 end
 
